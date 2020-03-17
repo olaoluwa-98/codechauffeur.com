@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main role="main">
+  <div>
+    <article id="content">
+      {{ .Content }}
+    </article>
+  </div>
+  {{ if ne .Params.normalpage false }}
+  <aside id="meta">
+      <div>
+      <section>
+        <span class="entry-meta"><time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 02, 2006" }} | {{ .WordCount }} Words</time></span>
+      </section>
+      {{ with .Params.topics }}
+      <ul id="topics">
+        {{ range . }}
+          <li><a href="{{ "topics" | absURL}}/{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      {{ with .Params.tags }}
+      <ul id="tags">
+        {{ range . }}
+          <li> <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      </div>
+      <div>
+          {{ with .PrevInSection }}
+            <a class="previous" href="{{.Permalink}}"> {{.Title}}</a> |
+          {{ end }}
+          {{ with .NextInSection }}
+            <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+          {{ end }}
+      </div>
+  </aside>
+  {{ end }}
+</main>
+{{ end }}

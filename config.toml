@@ -1,0 +1,46 @@
+baseURL = "https://codechauffeur.com/"
+languageCode = "en-uk"
+title = "Code Chauffeur"
+email = "awotunde.emmanuel1@gmail.com"
+twitter = "https://twitter.com/olaoluwa_98"
+github = "https://github.com/olaoluwa-98"
+theme = "beyondnothing"
+copyright = "© Emmanuel Awotunde"
+home = "https://codechauffeur.com/"
+
+[author]
+  name = "Emmanuel Awotunde"
+  homepage = "https://codechauffeur.com/"
+
+[params]
+    hidefromhome = "true"
+
+# Menu
+[menu]
+    # Header
+    [[menu.main]]
+        url = "/"
+        name = "Home"
+        weight = 1
+    [[menu.main]]
+        url = "/articles/"
+        name = "Articles"
+        weight = 2
+    [[menu.main]]
+        url = "/contact/"
+        name = "Contact"
+        weight = 3
+
+    # Footer
+    [[menu.footer]]
+        url = "http://twitter.com/olaoluwa_98"
+        name = "Twitter"
+        weight = 1
+    [[menu.footer]]
+        url = "https://github.com/olaoluwa-98"
+        name = "GitHub"
+        weight = 2
+    [[menu.footer]]
+        url = "mailto:awotunde.emmanuel1@gmail.com"
+        name = "Email"
+        weight = 3
