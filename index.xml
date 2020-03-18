@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code Chauffeur</title>
+    <link>https://codechauffeur.com/</link>
+    <description>Recent content on Code Chauffeur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>© Emmanuel Awotunde</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://codechauffeur.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to Reach Me</title>
+      <link>https://codechauffeur.com/contact/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/contact/</guid>
+      <description>You can reach me via email at awotunde.emmanuel1@gmail.com. You can also send me a DM on twitter @olaoluwa_98. I respond faster to mails because, why not?</description>
+    </item>
+    
+  </channel>
+</rss>
