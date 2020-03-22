@@ -13,6 +13,21 @@
   </url>
   
   <url>
+    <loc>https://codechauffeur.com/tags/community/</loc>
+    <lastmod>2020-03-22T22:20:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/opensource/</loc>
+    <lastmod>2020-03-22T22:20:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/</loc>
+    <lastmod>2020-03-22T22:20:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codechauffeur.com/</loc>
     <lastmod>2020-01-01T00:00:00+01:00</lastmod>
   </url>
@@ -24,10 +39,6 @@
   
   <url>
     <loc>https://codechauffeur.com/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/</loc>
   </url>
   
 </urlset>

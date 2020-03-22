@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>opensource on Code Chauffeur</title>
+    <link>https://codechauffeur.com/tags/opensource/</link>
+    <description>Recent content in opensource on Code Chauffeur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>© Emmanuel Awotunde</copyright>
+    <lastBuildDate>Sun, 22 Mar 2020 22:20:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://codechauffeur.com/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Benefits of Being in a Community as a Developer</title>
+      <link>https://codechauffeur.com/articles/benefits-of-being-in-a-community-as-a-developer/</link>
+      <pubDate>Sun, 22 Mar 2020 22:20:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/articles/benefits-of-being-in-a-community-as-a-developer/</guid>
+      <description>This article was previously published on Medium in May 2017.
+Covenant University Students and the facilitators during forLoopCU. Photo credit: Rotimi Okungbaye forLoopCU was the first developers’ meetup I attended. This was when my growth as a web developer actually started.
+I started learning web development last year 2016 after I finished my first year at the university (Computer Science). I learnt the basics of web development using HTML, CSS and JavaScript during my SIWES at Plat Technologies.</description>
+    </item>
+    
+  </channel>
+</rss>
