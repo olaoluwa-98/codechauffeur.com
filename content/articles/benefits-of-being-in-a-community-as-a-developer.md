@@ -3,6 +3,7 @@ title: "Benefits of Being in a Community as a Developer"
 date: 2020-03-22T22:20:00+01:00
 draft: false
 images: ["/images/community-dev-benefits/forloop-cu.jpeg", "/images/community-dev-benefits/forloop-cu-be-session.jpeg", "/images/community-dev-benefits/laptop-with-stickers.png"]
+tags: [community,opensource]
 ---
 
 This article was previously published on [Medium](https://medium.com/@olaoluwa_98/benefits-of-being-in-a-community-as-a-developer-879f0d1b63d5) in May 2017.
