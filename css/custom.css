@@ -19,12 +19,12 @@ img {
 
 header,
 footer {
-  margin: 4rem 0;
+  margin: 3rem 0;
   text-align: center;
 }
 
 main {
-  margin: 5rem 0;
+  margin: 4rem 0;
 }
 
 .container a:link, .container a:visited {
@@ -58,7 +58,7 @@ hr {
 	}
 
 .container {
-  width: 85%;
+  width: 90%;
   max-width: 650px;
 }
 
