@@ -13,7 +13,18 @@ home = "https://codechauffeur.com/"
   homepage = "https://codechauffeur.com/"
 
 [params]
+    title = "Code Chauffeur"
+    images = ["/images/logo.png"]
+    description = "Software engineering should be as fun as a ride, let's take the ride together🚗"
     hidefromhome = "true"
+
+[taxonomies]
+    tag = "tags"
+
+googleAnalytics = "UA-92329943-4"
+
+enableRobotsTXT = true
+canonifyURLs = true
 
 # Menu
 [menu]
@@ -44,3 +55,12 @@ home = "https://codechauffeur.com/"
         url = "mailto:awotunde.emmanuel1@gmail.com"
         name = "Email"
         weight = 3
+    [[menu.footer]]
+        url = "/articles/index.xml"
+        name = "RSS"
+        weight = 4
+
+# Links format
+[permalinks]
+    articles = "/:slug/"
+    tags = "/tags/:slug/"
