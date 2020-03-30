@@ -8,6 +8,8 @@ theme = "beyondnothing"
 copyright = "© Emmanuel Awotunde"
 home = "https://codechauffeur.com/"
 
+googleAnalytics = "UA-92329943-4"
+
 [author]
   name = "Emmanuel Awotunde"
   homepage = "https://codechauffeur.com/"
@@ -17,14 +19,6 @@ home = "https://codechauffeur.com/"
     images = ["/images/logo.png"]
     description = "Software engineering should be as fun as a ride, let's take the ride together🚗"
     hidefromhome = "true"
-
-[taxonomies]
-    tag = "tags"
-
-googleAnalytics = "UA-92329943-4"
-
-enableRobotsTXT = true
-canonifyURLs = true
 
 # Menu
 [menu]
@@ -59,6 +53,9 @@ canonifyURLs = true
         url = "/articles/index.xml"
         name = "RSS"
         weight = 4
+
+enableRobotsTXT = true
+canonifyURLs = true
 
 # Links format
 [permalinks]
