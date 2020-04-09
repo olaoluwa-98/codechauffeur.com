@@ -3,8 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codechauffeur.com/tags/adonisjs/</loc>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codechauffeur.com/articles/</loc>
-    <lastmod>2020-03-22T22:20:00+01:00</lastmod>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</loc>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/nodejs/</loc>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/</loc>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/validation/</loc>
+    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +44,6 @@
   
   <url>
     <loc>https://codechauffeur.com/tags/opensource/</loc>
-    <lastmod>2020-03-22T22:20:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/</loc>
     <lastmod>2020-03-22T22:20:00+01:00</lastmod>
   </url>
   

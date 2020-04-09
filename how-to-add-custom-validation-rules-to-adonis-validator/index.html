@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.67.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>How to Add Custom Validation Rules to Adonis Validator  | Code Chauffeur</title>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-92329943-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+
+    <meta property="og:title" content="How to Add Custom Validation Rules to Adonis Validator" />
+<meta property="og:description" content="You can add your custom validation rules easily by following this article" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/" />
+<meta property="og:image" content="https://codechauffeur.com/images/extending-adonis-validator/final-screen.gif" />
+<meta property="article:published_time" content="2020-04-09T07:00:00+01:00" />
+<meta property="article:modified_time" content="2020-04-09T07:00:00+01:00" /><meta property="og:site_name" content="Code Chauffeur" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://codechauffeur.com/images/extending-adonis-validator/final-screen.gif"/>
+
+<meta name="twitter:title" content="How to Add Custom Validation Rules to Adonis Validator"/>
+<meta name="twitter:description" content="You can add your custom validation rules easily by following this article"/>
+
+    <meta itemprop="name" content="How to Add Custom Validation Rules to Adonis Validator">
+<meta itemprop="description" content="You can add your custom validation rules easily by following this article">
+<meta itemprop="datePublished" content="2020-04-09T07:00:00&#43;01:00" />
+<meta itemprop="dateModified" content="2020-04-09T07:00:00&#43;01:00" />
+<meta itemprop="wordCount" content="1180">
+<meta itemprop="image" content="https://codechauffeur.com/images/extending-adonis-validator/final-screen.gif">
+
+
+
+<meta itemprop="keywords" content="Nodejs,Validation,AdonisJs," />
+</head>
+
+<body>
+    <div class="container">
+<header role="contentinfo">
+    
+    <div class="header-links">
+            <a href="/">Home</a> /
+            <a href="/articles/">Articles</a> /
+            <a href="/contact/">Contact</a> /
+    </div>
+    
+</header>
+<header role="banner">
+            <h1>How to Add Custom Validation Rules to Adonis Validator</h1>
+        </header>
+        <div id="content">
+
+<style>
+  code {
+    background: initial;
+    border: none;
+  }
+</style>
+<main role="main">
+  <div>
+    <article id="content">
+      <p>If you are reading this article, I assume you must have used <em>AdonisJs</em> or you must have heard about the framework. 
+<a href="https://adonisjs.com">AdonisJs</a> is a NodeJs framework that was inspired by Laravel. The framework was modeled after <a href="https://laravel.com">Laravel</a>.</p>
+<p>Like most robust frameworks, <em>AdonisJs</em> comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own. The good news is that it is very easy to write custom rules and add them to the validator. In this article, I will walk you through how to do that.</p>
+<p>First, we have to setup our application - let&rsquo;s call it <em>MCU Character Checker</em>. To start, install <code>adonis</code> globally with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -g @adonisjs/cli
+</code></pre></div><p>Create a new application with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis new mcu-character-checker
+</code></pre></div><p>Check <a href="https://adonisjs.com/docs/4.1/installation">installation page</a> for more information.
+Here is what our folder structure will look like:</p>
+<pre><code>├── app
+│   ├── Middleware
+│   └── Models
+├── config
+├── database
+│   └── migrations
+├── public
+├── resources
+│   └── views
+└── start
+</code></pre><p>Start the application server:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd mcu-character-checker <span style="color:#f92672">&amp;&amp;</span> adonis serve --dev
+</code></pre></div><p>You can open the application on <a href="http://localhost:3333">localhost:3333</a>, AdonisJs serves on port 3333 by default. You should have this page in the image below if everything ran correctly.</p>
+<p><img src="/images/extending-adonis-validator/adonis-landing-page.png" alt="Adonis Landing Page"></p>
+<p>Now, let&rsquo;s create a page that collects data. We&rsquo;ll edit <code>start/routes.js</code>.</p>
+<p>Replace the index route with this line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Route</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#e6db74">&#34;CharacterController.showPage&#34;</span>);
+</code></pre></div><p>We have added our <code>/</code> route, now we have to create our <code>CharacterController</code> to handle this route. We&rsquo;ll do this by running</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis make:controller CharacterController --type http
+</code></pre></div><p>Great! Now we have our <code>CharacterController</code>, let&rsquo;s create our <code>showPage</code> method to handle the route:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">async</span> <span style="color:#a6e22e">showPage</span>({ <span style="color:#a6e22e">view</span> }) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">view</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;check-character&#34;</span>);
+}
+</code></pre></div><p>Create the view for the route:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis make:view check-character
+</code></pre></div><p>This will create <code>resources/views/check-character.edge</code>. Add the lines below to the file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    <span style="color:#75715e">&lt;!-- Standard Meta --&gt;</span>
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">http-equiv</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;X-UA-Compatible&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IE=edge,chrome=1&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0, maximum-scale=5.0&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;
+      Check MCU Characters
+    &lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;<span style="color:#f92672">style</span>&gt;
+      .<span style="color:#a6e22e">container</span> {
+        <span style="color:#66d9ef">margin</span>:<span style="color:#66d9ef">auto</span>
+      }
+      .<span style="color:#a6e22e">form</span> {
+        <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+        <span style="color:#66d9ef">margin-top</span>: <span style="color:#ae81ff">20</span><span style="color:#66d9ef">vh</span>;
+      }
+      .<span style="color:#a6e22e">form</span> <span style="color:#f92672">input</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">form</span> <span style="color:#f92672">button</span> {
+        <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">120</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">30</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">0</span>;
+        <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">15</span><span style="color:#66d9ef">px</span>;
+        <span style="color:#66d9ef">border-color</span>: <span style="color:#66d9ef">black</span>;
+      }
+    &lt;/<span style="color:#f92672">style</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form&#34;</span>&gt;
+      &lt;<span style="color:#f92672">h1</span>&gt; Check for an MCU Character&lt;/<span style="color:#f92672">h1</span>&gt;
+      &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        {{ csrfField() }}
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;character&#34;</span> <span style="color:#a6e22e">required</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span>&gt;Click to Check&lt;/<span style="color:#f92672">button</span>&gt;
+      &lt;/<span style="color:#f92672">form</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  &lt;/<span style="color:#f92672">div</span>&gt;
+
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>The page should look like this;</p>
+<p><img src="/images/extending-adonis-validator/check-mcu-landing-page.png" alt="MCU Character Checker landing page"></p>
+<p>Our goal is to validate that a character (provided in the form) exists in the MCU. Obviously, this kind of validation may not be easy to achieve with the rules provided on AdonisJs validator so we will have to create a custom rule.</p>
+<p>The rule will check a list of names and validate that the provided name is for an MCU character. To create a custom rule we need to first install Adonis Validator. Run this command to install it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis install @adonisjs/validator
+</code></pre></div><p>Then, register the validator provider inside the <code>start/app.js</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">providers</span> <span style="color:#f92672">=</span> [
+  <span style="color:#e6db74">&#39;@adonisjs/validator/providers/ValidatorProvider&#39;</span>
+]
+</code></pre></div><p>To extend the validator, we&rsquo;ll implement our validation function and add it to <code>start/hooks.js</code>. The file isn&rsquo;t part of our current setup, so we&rsquo;ll create it then add these lines to the file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">ioc</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;@adonisjs/fold&#34;</span>);
+<span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">hooks</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;@adonisjs/ignitor&#34;</span>);
+</code></pre></div><p>Adonis provides different hooks for differents points in the application lifecycle. Adonis currently has 5 hooks namely: <code>providersRegistered</code>, <code>providersBooted</code>, <code>preloading</code>, <code>httpServer</code> and <code>aceCommand</code>. For our use case, we&rsquo;ll use <code>providersRegistered</code>. Next, we implement our validation function and extend the <code>Validator</code>. Our validation function will have the following parameters, <code>data, field, message, args, get</code>.</p>
+<blockquote>
+<p><code>data</code> is an object containing the input fields and their values. In our case, it will look like this <code>{ character: 'Iron Man' }</code>.</p>
+</blockquote>
+<blockquote>
+<p><code>field</code> is the particular input field that is being validated which would be <code>character</code> in our case.</p>
+</blockquote>
+<blockquote>
+<p><code>message</code> is the error message that should be returned if the validation fails.</p>
+</blockquote>
+<blockquote>
+<p><code>args</code> is a list of extra values passed in the validation rule.</p>
+</blockquote>
+<blockquote>
+<p><code>get</code> is a function that is used to get the value of a key in an object (i.e data). To get the value of <code>character</code>, we&rsquo;ll use <code>get(data, field)</code>.</p>
+</blockquote>
+<p>Our validation function which will be in <code>start/hooks.js</code> will look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">mcuCharacter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">async</span> (<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">field</span>, <span style="color:#a6e22e">message</span>, <span style="color:#a6e22e">args</span>, <span style="color:#a6e22e">get</span>) =&gt; {
+  <span style="color:#75715e">// get the character value
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">field</span>);
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">value</span>) {
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * skip validation if value is not defined. `required` rule
+</span><span style="color:#75715e">     * should take care of it.
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">return</span>;
+  }
+
+  <span style="color:#75715e">// validate the character
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shortListOfMCUCharacters</span> <span style="color:#f92672">=</span> [
+    <span style="color:#e6db74">&#34;iron man&#34;</span>,
+    <span style="color:#e6db74">&#34;hulk&#34;</span>,
+    <span style="color:#e6db74">&#34;spider-man&#34;</span>,
+    <span style="color:#e6db74">&#34;loki&#34;</span>,
+    <span style="color:#e6db74">&#34;thor&#34;</span>,
+    <span style="color:#e6db74">&#34;odin&#34;</span>,
+    <span style="color:#e6db74">&#34;black widow&#34;</span>,
+    <span style="color:#e6db74">&#34;nick fury&#34;</span>,
+    <span style="color:#e6db74">&#34;gamora&#34;</span>,
+    <span style="color:#e6db74">&#34;black panther&#34;</span>,
+    <span style="color:#e6db74">&#34;doctor strange&#34;</span>,
+    <span style="color:#e6db74">&#34;groot&#34;</span>,
+    <span style="color:#e6db74">&#34;ant-man&#34;</span>,
+    <span style="color:#e6db74">&#34;captain america&#34;</span>,
+    <span style="color:#e6db74">&#34;hawkeye&#34;</span>,
+    <span style="color:#e6db74">&#34;wasp&#34;</span>,
+    <span style="color:#e6db74">&#34;star-lord&#34;</span>,
+    <span style="color:#e6db74">&#34;shuri&#34;</span>,
+    <span style="color:#e6db74">&#34;valkrie&#34;</span>,
+    <span style="color:#e6db74">&#34;dormammu&#34;</span>
+  ];
+
+  <span style="color:#75715e">// if the character is not in the list, throw the validation error message
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">shortListOfMCUCharacters</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">toLowerCase</span>()))
+    <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">||</span>
+      <span style="color:#e6db74">`Nah, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">value</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> isn&#39;t part of the list as far as I am concerned`</span>;
+};
+</code></pre></div><p>We&rsquo;ll extend the <code>Validator</code> with this new validation function.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Validator</span>.<span style="color:#a6e22e">extend</span>(<span style="color:#e6db74">&#34;mcuCharacter&#34;</span>, <span style="color:#a6e22e">mcuCharacter</span>);
+</code></pre></div><blockquote>
+<p>Note: the <code>Validator.extend</code>'s first argument is a string, it represents how you would use this rule. It must be in camel case,  Ours is <code>mcuCharacter</code> which would be <code>mc_character</code> when using it as a rule.</p>
+</blockquote>
+<p>We&rsquo;ll place this extension in the <code>providersRegistered</code> hook. So our <code>start/hooks.js</code> will look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">hooks</span>.<span style="color:#a6e22e">after</span>.<span style="color:#a6e22e">providersRegistered</span>(() =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Validator</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ioc</span>.<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#34;Validator&#34;</span>);
+  <span style="color:#a6e22e">Validator</span>.<span style="color:#a6e22e">extend</span>(<span style="color:#e6db74">&#34;mcuCharacter&#34;</span>, <span style="color:#a6e22e">mcuCharacter</span>);
+});
+</code></pre></div><blockquote>
+<p>Note: the <code>Validator</code> in imported inside the <code>providersRegistered</code> hook before it&rsquo;s in this hook that providers are registered so the <code>Validator</code> cannot be accessed outside of this.</p>
+</blockquote>
+<p>Now that we have created our custom validation rule <code>mc_character</code>, let&rsquo;s go ahead and use it.</p>
+<h2 id="ways-to-use-adonis-validator">Ways to use Adonis Validator</h2>
+<ul>
+<li><strong>Route Level Validation</strong>: This validates the <code>request</code> payload before it proceeds to the <code>Controller</code>. Check <a href="https://adonisjs.com/docs/4.1/validator#_route_validator">here</a>.</li>
+<li><strong>Middleware Level Validation</strong>: Here, you perform the validation in a middleware.</li>
+<li><strong>Validation in the Controller</strong>: You perform the validation in the controller.</li>
+</ul>
+<p>You can use any method you like or the one that suits your code structure. I use <code>Route Level Validation</code> when I&rsquo;m expecting a high number of input fields, I use <code>Middleware Level Validation</code> whenever I need to access the <code>auth</code> object
+and I used <code>Validation in the Controller</code> when it&rsquo;s one or two validations I want to perform.</p>
+<p>In our example, we&rsquo;ll use <code>Validation in the Controller</code>. Import the Validator in <code>CharacterController</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">validate</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#39;Validator&#39;</span>)
+</code></pre></div><p>We&rsquo;ll add a new route to receive the character in <code>start/routes.js</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Route</span>.<span style="color:#a6e22e">post</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#e6db74">&#34;CharacterController.checkCharacter&#34;</span>);
+</code></pre></div><p>Create the <code>checkCharacter</code> method in <code>CharacterController</code> to handle the request:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">async</span> <span style="color:#a6e22e">checkCharacter</span>({ <span style="color:#a6e22e">request</span>, <span style="color:#a6e22e">view</span> }) {
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">view</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;check-character&#34;</span>);
+}
+</code></pre></div><p>Let&rsquo;s validate the character. Add these lines to the <code>checkCharacter</code> method</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// create the rules for validation
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rules</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">character</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;required|mcu_character&#34;</span>
+};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">validation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">validate</span>(<span style="color:#a6e22e">input</span>, <span style="color:#a6e22e">rules</span>);
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">character</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> is part of the MCU, yay!`</span>;
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">validation</span>.<span style="color:#a6e22e">fails</span>()) {
+  <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`Nah, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">character</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> isn&#39;t part of the list as far as I am concerned`</span>;
+}
+
+<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">view</span>.<span style="color:#a6e22e">render</span>(<span style="color:#e6db74">&#34;check-character&#34;</span>, { <span style="color:#a6e22e">message</span> });
+</code></pre></div><p>We&rsquo;ll modify our <code>check-character.edge</code> template and add the message data. Add this below the submit button:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;{{ message }}&lt;/<span style="color:#f92672">p</span>&gt;
+</code></pre></div><p>Our application is now validating MCU characters!</p>
+<p><img src="/images/extending-adonis-validator/final-screen.gif" alt="MCU Character Checker final"></p>
+<p>You can check the full source code <a href="https://github.com/olaoluwa-98/extending-adonis-validator-tutorial">here</a></p>
+<p>This article is also published on <a href="https://dev.to/olaoluwa98/how-to-add-custom-validation-rules-to-adonisjs-validator-54d1">Dev.to</a></p>
+
+    </article>
+  </div>
+  
+  <aside id="meta">
+      <div>
+      <section>
+        <span class="entry-meta"><time itemprop="datePublished" datetime="2020-04-09">April 09, 2020 | 1180 Words</time></span>
+      </section>
+      
+      
+      <ul id="tags">
+        
+          <li> <a href="https://codechauffeur.com/tags/nodejs">Nodejs</a> </li>
+        
+          <li> <a href="https://codechauffeur.com/tags/validation">Validation</a> </li>
+        
+          <li> <a href="https://codechauffeur.com/tags/adonisjs">AdonisJs</a> </li>
+        
+      </ul>
+      
+      </div>
+      <div>
+          
+            <a class="previous" href="https://codechauffeur.com/benefits-of-being-in-a-community-as-a-developer/"> Benefits of Being in a Community as a Developer</a> |
+          
+          
+      </div>
+  </aside>
+  
+</main>
+
+        </div>
+<footer role="contentinfo">
+    <div class="hr"></div>
+
+    
+    <div class="footer-links">
+            <a href="http://twitter.com/olaoluwa_98">Twitter</a> /
+            <a href="https://github.com/olaoluwa-98">GitHub</a> /
+            <a href="mailto:awotunde.emmanuel1@gmail.com" target="_blank">Email</a> /
+        
+            <a href="/articles/index.xml">RSS</a> /
+    </div>
+    
+    
+    <div class="copyright">© Emmanuel Awotunde</div>
+    
+</footer>
+
+
+<script src="https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
+<script>
+  mediumZoom(document.querySelectorAll('img'));
+</script></div>
+</body>
+
+</html>
