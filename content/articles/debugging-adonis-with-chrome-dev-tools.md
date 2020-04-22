@@ -2,6 +2,7 @@
 title: "Debugging Adonis With Chrome DevTools"
 date: 2020-04-23T08:00:00+01:00
 draft: false
+description: "Debugging Adonis or Node.js can be easier using the debugger keyword"
 images: ["images/debugging-adonis-with-chrome/adonis-debugger.png"]
 tags: [Node.js,Debugging,AdonisJs]
 ---
@@ -10,10 +11,10 @@ Debugging Node.js can be very difficult. Most times when something goes wrong it
 there's a variable that you expect to have a value but it's `null` or `undefined`.
 
 The first thing that comes to mind when debugging in Node.js is usually to use `console.log`. This usually will get you a solution but in the long run, it wastes time.
-We've all been in a situation where we had to use `console.log` multiple times because once was not a enough. In a haste to quickly solve the problem we spend more time logging at different
+We've all been in a situation where we had to use `console.log` multiple times because once was not enough. In a bid to quickly solve the problem we spend more time logging at different
 points of the application.
 
-But it does not have to be that way. There's a much simpler and more effective way of debugging in Node.js. It's by using a very simple keyword
+But it does not have to be that way. There's a much simpler and more effective way of debugging in Node.js. It's by using a very simple keyword:
 
 ```js
 debugger;
@@ -55,10 +56,10 @@ Whenever the execution of your application encounters the keyword `debugger`, it
 - Resume execution
 - Step over to the next function call
 - Step into the next function call
-- Step out of current function
-- Pause exection where exceptions are thrown
+- Step out of the current function
+- Pause execution where exceptions are thrown
 - and many more
 
-Voila! That's it. With this you can easily debug your AdonisJs application and not have to `console.log` everywhere😂.
+Voila! That's it. With this, you can easily debug your AdonisJs application and not have to `console.log` everywhere😂.
 
 You can check [Node.js docs](https://nodejs.org/api/debugger.html) for more information on debuggers.
