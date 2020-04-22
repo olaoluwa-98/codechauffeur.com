@@ -8,7 +8,7 @@ tags: [Nodejs,Validation,AdonisJs]
 ---
 
 If you are reading this article, I assume you must have used *AdonisJs* or you must have heard about the framework. 
-[AdonisJs](https://adonisjs.com) is a NodeJs framework that was inspired by Laravel. The framework was modeled after [Laravel](https://laravel.com).
+[AdonisJs](https://adonisjs.com) is a NodeJs web framework that was inspired by Laravel. The framework was modeled after [Laravel](https://laravel.com).
 
 Like most robust frameworks, *AdonisJs* comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own. The good news is that it is very easy to write custom rules and add them to the validator. In this article, I will walk you through how to do that.
 
