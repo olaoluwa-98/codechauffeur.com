@@ -4,12 +4,32 @@
   
   <url>
     <loc>https://codechauffeur.com/tags/adonisjs/</loc>
-    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://codechauffeur.com/articles/</loc>
-    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/debugging/</loc>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</loc>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/node.js/</loc>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/</loc>
+    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +39,6 @@
   
   <url>
     <loc>https://codechauffeur.com/tags/nodejs/</loc>
-    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/</loc>
     <lastmod>2020-04-09T07:00:00+01:00</lastmod>
   </url>
   

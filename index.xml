@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Debugging Adonis With Chrome DevTools</title>
+      <link>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</link>
+      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</guid>
+      <description>Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or there&amp;rsquo;s a variable that you expect to have a value but it&amp;rsquo;s null or undefined.
+The first thing that comes to mind when debugging in Node.js is usually to use console.log. This usually will get you a solution but in the long run, it wastes time.</description>
+    </item>
+    
+    <item>
       <title>How to Add Custom Validation Rules to Adonis Validator</title>
       <link>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</link>
       <pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© Emmanuel Awotunde</copyright>
-    <lastBuildDate>Thu, 09 Apr 2020 07:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2020 09:00:00 +0100</lastBuildDate>
     
 	<atom:link href="https://codechauffeur.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,27 @@
     <item>
       <title>AdonisJs</title>
       <link>https://codechauffeur.com/tags/adonisjs/</link>
-      <pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate>
+      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
       
       <guid>https://codechauffeur.com/tags/adonisjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>https://codechauffeur.com/tags/debugging/</link>
+      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/tags/debugging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://codechauffeur.com/tags/node.js/</link>
+      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/tags/node.js/</guid>
       <description></description>
     </item>
     

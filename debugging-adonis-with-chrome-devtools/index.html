@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.67.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Debugging Adonis With Chrome DevTools  | Code Chauffeur</title>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-92329943-4', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+
+    <meta property="og:title" content="Debugging Adonis With Chrome DevTools" />
+<meta property="og:description" content="Debugging Adonis or Node.js can be easier using the debugger keyword" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://codechauffeur.com/debugging-adonis-with-chrome-devtools/" />
+<meta property="og:image" content="https://codechauffeur.com/images/debugging-adonis-with-chrome/cover-image.png" />
+<meta property="article:published_time" content="2020-04-23T09:00:00+01:00" />
+<meta property="article:modified_time" content="2020-04-23T09:00:00+01:00" /><meta property="og:site_name" content="Code Chauffeur" />
+
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://codechauffeur.com/images/debugging-adonis-with-chrome/cover-image.png"/>
+
+<meta name="twitter:title" content="Debugging Adonis With Chrome DevTools"/>
+<meta name="twitter:description" content="Debugging Adonis or Node.js can be easier using the debugger keyword"/>
+
+    <meta itemprop="name" content="Debugging Adonis With Chrome DevTools">
+<meta itemprop="description" content="Debugging Adonis or Node.js can be easier using the debugger keyword">
+<meta itemprop="datePublished" content="2020-04-23T09:00:00&#43;01:00" />
+<meta itemprop="dateModified" content="2020-04-23T09:00:00&#43;01:00" />
+<meta itemprop="wordCount" content="446">
+<meta itemprop="image" content="https://codechauffeur.com/images/debugging-adonis-with-chrome/cover-image.png">
+
+
+
+<meta itemprop="keywords" content="Node.js,Debugging,AdonisJs," />
+</head>
+
+<body>
+    <div class="container">
+<header role="contentinfo">
+    
+    <div class="header-links">
+            <a href="/">Home</a> /
+            <a href="/articles/">Articles</a> /
+            <a href="/contact/">Contact</a> /
+    </div>
+    
+</header>
+<header role="banner">
+            <h1>Debugging Adonis With Chrome DevTools</h1>
+        </header>
+        <div id="content">
+
+<style>
+  code {
+    background: initial;
+    border: none;
+  }
+</style>
+<main role="main">
+  <div>
+    <article id="content">
+      <p>Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or
+there&rsquo;s a variable that you expect to have a value but it&rsquo;s <code>null</code> or <code>undefined</code>.</p>
+<p>The first thing that comes to mind when debugging in Node.js is usually to use <code>console.log</code>. This usually will get you a solution but in the long run, it wastes time.
+We&rsquo;ve all been in a situation where we had to use <code>console.log</code> multiple times because once was not enough. In a bid to quickly solve the problem we spend more time logging at different
+points of the application.</p>
+<p>But it does not have to be that way. There&rsquo;s a much simpler and more effective way of debugging in Node.js. It&rsquo;s by using a very simple keyword:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">debugger</span>;
+</code></pre></div><hr>
+<p>As simple as this is, many people do not know about it. The keyword is more popular for Javascript on the browser because it doesn&rsquo;t need anything more than just typing it anywhere in your code.
+In Node.js it&rsquo;s a little different, you have to do more than just typing the keyword. To enable debugging in Node.js, in addition to adding <code>debugger;</code> in your code, you have to run the application using:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">node inspect &lt;file_name.js&gt;
+</code></pre></div><p>There are other ways to debug Node.js aside from <code>node-inspect</code>, some are:</p>
+<ul>
+<li><strong>Chrome DevTools</strong>: I&rsquo;d expand more on this later in the article.</li>
+<li><strong>Visual Studio Code</strong>: It&rsquo;s the most effective if you already use VS Code.</li>
+<li><strong>Visual Studio</strong></li>
+<li><strong>Some JetBrains IDEs</strong></li>
+<li><strong>Eclipse IDE</strong></li>
+</ul>
+<h2 id="debugging-with-chrome-devtools">Debugging with Chrome DevTools</h2>
+<p>We&rsquo;ll be using <a href="https://adonisjs.com">AdonisJs</a> (a Node.js web framework) as an example. To enable debugging mode on Adonis run:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis serve --dev --debug
+</code></pre></div><p><img src="/images/debugging-adonis-with-chrome/adonis-debugger.png" alt="Adonis debug"></p>
+<p>This debugger makes use of <strong>Chrome DevTools</strong> so head over to Chrome (If you have it installed). You should see the Node.js icon when you enable the DevTools. Clicking it will open a new window for debugging.</p>
+<p><img src="/images/debugging-adonis-with-chrome/chrome-dev-tools.png" alt="Chrome dev tools"></p>
+<p>Whenever the execution of your application encounters the keyword <code>debugger</code>, it&rsquo;ll automatically pause execution and open the Chrome debugger window. You can do a lot of things in this window:</p>
+<ul>
+<li>See the value of scope and global variables</li>
+<li>View the call stack: allows you to see all the functions that were executed up until the current function being executed</li>
+<li>Resume execution</li>
+<li>Step over to the next function call</li>
+<li>Step into the next function call</li>
+<li>Step out of the current function</li>
+<li>Pause execution where exceptions are thrown</li>
+<li>and many more</li>
+</ul>
+<p>Voila! That&rsquo;s it. With this, you can easily debug your AdonisJs application and not have to <code>console.log</code> everywhere😂.</p>
+<p>You can check <a href="https://nodejs.org/api/debugger.html">Node.js docs</a> for more information on debuggers.</p>
+
+    </article>
+  </div>
+  
+  <aside id="meta">
+      <div>
+      <section>
+        <span class="entry-meta"><time itemprop="datePublished" datetime="2020-04-23">April 23, 2020 | 446 Words</time></span>
+      </section>
+      
+      
+      <ul id="tags">
+        
+          <li> <a href="https://codechauffeur.com/tags/node.js">Node.js</a> </li>
+        
+          <li> <a href="https://codechauffeur.com/tags/debugging">Debugging</a> </li>
+        
+          <li> <a href="https://codechauffeur.com/tags/adonisjs">AdonisJs</a> </li>
+        
+      </ul>
+      
+      </div>
+      <div>
+          
+            <a class="previous" href="https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/"> How to Add Custom Validation Rules to Adonis Validator</a> |
+          
+          
+      </div>
+  </aside>
+  
+</main>
+
+        </div>
+<footer role="contentinfo">
+    <div class="hr"></div>
+
+    
+    <div class="footer-links">
+            <a href="http://twitter.com/olaoluwa_98">Twitter</a> /
+            <a href="https://github.com/olaoluwa-98">GitHub</a> /
+            <a href="mailto:awotunde.emmanuel1@gmail.com" target="_blank">Email</a> /
+        
+            <a href="/articles/index.xml">RSS</a> /
+    </div>
+    
+    
+    <div class="copyright">© Emmanuel Awotunde</div>
+    
+</footer>
+
+
+<script src="https://unpkg.com/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
+<script>
+  mediumZoom(document.querySelectorAll('img'));
+</script></div>
+</body>
+
+</html>
