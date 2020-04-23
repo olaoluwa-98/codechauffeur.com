@@ -1,6 +1,6 @@
 ---
 title: "Debugging Adonis With Chrome DevTools"
-date: 2020-04-23T08:00:00+01:00
+date: 2020-04-23T09:00:00+01:00
 draft: false
 description: "Debugging Adonis or Node.js can be easier using the debugger keyword"
 images: ["images/debugging-adonis-with-chrome/cover-image.png"]
