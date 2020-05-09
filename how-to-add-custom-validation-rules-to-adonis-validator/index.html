@@ -32,12 +32,12 @@ if (!doNotTrack) {
 <meta property="og:description" content="You can add your custom validation rules easily by following this article" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/" />
-<meta property="og:image" content="https://codechauffeur.com/images/extending-adonis-validator/adding-custom-validation-rules-adonis.png" />
+<meta property="og:image" content="https://codechauffeur.com/images/adding-custom-validation-rules-adonis/adding-custom-validation-rules-adonis.png" />
 <meta property="article:published_time" content="2020-04-09T07:00:00+01:00" />
 <meta property="article:modified_time" content="2020-04-09T07:00:00+01:00" /><meta property="og:site_name" content="Code Chauffeur" />
 
     <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://codechauffeur.com/images/extending-adonis-validator/adding-custom-validation-rules-adonis.png"/>
+<meta name="twitter:image" content="https://codechauffeur.com/images/adding-custom-validation-rules-adonis/adding-custom-validation-rules-adonis.png"/>
 
 <meta name="twitter:title" content="How to Add Custom Validation Rules to Adonis Validator"/>
 <meta name="twitter:description" content="You can add your custom validation rules easily by following this article"/>
@@ -47,7 +47,7 @@ if (!doNotTrack) {
 <meta itemprop="datePublished" content="2020-04-09T07:00:00&#43;01:00" />
 <meta itemprop="dateModified" content="2020-04-09T07:00:00&#43;01:00" />
 <meta itemprop="wordCount" content="1181">
-<meta itemprop="image" content="https://codechauffeur.com/images/extending-adonis-validator/adding-custom-validation-rules-adonis.png">
+<meta itemprop="image" content="https://codechauffeur.com/images/adding-custom-validation-rules-adonis/adding-custom-validation-rules-adonis.png">
 
 
 
@@ -101,7 +101,7 @@ Here is what our folder structure will look like:</p>
 </code></pre><p>Start the application server:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd mcu-character-checker <span style="color:#f92672">&amp;&amp;</span> adonis serve --dev
 </code></pre></div><p>You can open the application on <a href="http://localhost:3333">localhost:3333</a>, AdonisJs serves on port 3333 by default. You should have this page in the image below if everything ran correctly.</p>
-<p><img src="/images/extending-adonis-validator/adonis-landing-page.png" alt="Adonis Landing Page"></p>
+<p><img src="/images/adding-custom-validation-rules-adonis/adonis-landing-page.png" alt="Adonis Landing Page"></p>
 <p>Now, let&rsquo;s create a page that collects data. We&rsquo;ll edit <code>start/routes.js</code>.</p>
 <p>Replace the index route with this line:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">Route</span>.<span style="color:#a6e22e">get</span>(<span style="color:#e6db74">&#34;/&#34;</span>, <span style="color:#e6db74">&#34;CharacterController.showPage&#34;</span>);
@@ -157,7 +157,7 @@ Here is what our folder structure will look like:</p>
 &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><p>The page should look like this;</p>
-<p><img src="/images/extending-adonis-validator/check-mcu-landing-page.png" alt="MCU Character Checker landing page"></p>
+<p><img src="/images/adding-custom-validation-rules-adonis/check-mcu-landing-page.png" alt="MCU Character Checker landing page"></p>
 <p>Our goal is to validate that a character (provided in the form) exists in the MCU. Obviously, this kind of validation may not be easy to achieve with the rules provided on AdonisJs validator so we will have to create a custom rule.</p>
 <p>The rule will check a list of names and validate that the provided name is for an MCU character. To create a custom rule we need to first install Adonis Validator. Run this command to install it:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">adonis install @adonisjs/validator
@@ -272,7 +272,7 @@ and I used <code>Validation in the Controller</code> when it&rsquo;s one or two 
 </code></pre></div><p>We&rsquo;ll modify our <code>check-character.edge</code> template and add the message data. Add this below the submit button:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">p</span>&gt;{{ message }}&lt;/<span style="color:#f92672">p</span>&gt;
 </code></pre></div><p>Our application is now validating MCU characters!</p>
-<p><img src="/images/extending-adonis-validator/final-screen.gif" alt="MCU Character Checker final"></p>
+<p><img src="/images/adding-custom-validation-rules-adonis/final-screen.gif" alt="MCU Character Checker final"></p>
 <p>You can check the full source code <a href="https://github.com/olaoluwa-98/extending-adonis-validator-tutorial">here</a></p>
 <p>This article is also published on <a href="https://dev.to/olaoluwa98/how-to-add-custom-validation-rules-to-adonisjs-validator-54d1">Dev.to</a></p>
 

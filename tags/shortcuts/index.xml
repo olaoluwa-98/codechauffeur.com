@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>shortcuts on Code Chauffeur</title>
+    <link>https://codechauffeur.com/tags/shortcuts/</link>
+    <description>Recent content in shortcuts on Code Chauffeur</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <copyright>© Emmanuel Awotunde</copyright>
+    <lastBuildDate>Sat, 09 May 2020 18:07:44 +0100</lastBuildDate>
+    
+	<atom:link href="https://codechauffeur.com/tags/shortcuts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Convert String Case Easily in VS Code with this Extension</title>
+      <link>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</link>
+      <pubDate>Sat, 09 May 2020 18:07:44 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</guid>
+      <description>As developers, we all want to develop things fast. If you use Visual Studio Code (VS Code), you should know about extensions. Extensions are a very big part of turning an ordinary text editor into a super productive environment for coding. There so many extensions available on VS Code and it&amp;rsquo;s easy to build one if you have a part of your development workflow you&amp;rsquo;d love to optimize or automate.</description>
+    </item>
+    
+  </channel>
+</rss>

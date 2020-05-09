@@ -3,12 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://codechauffeur.com/tags/adonisjs/</loc>
-    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
+    <loc>https://codechauffeur.com/articles/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://codechauffeur.com/articles/</loc>
+    <loc>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/extensions/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/shortcuts/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/vscode/</loc>
+    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/adonisjs/</loc>
     <lastmod>2020-04-23T09:00:00+01:00</lastmod>
   </url>
   
@@ -24,11 +49,6 @@
   
   <url>
     <loc>https://codechauffeur.com/tags/node.js/</loc>
-    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/</loc>
     <lastmod>2020-04-23T09:00:00+01:00</lastmod>
   </url>
   
