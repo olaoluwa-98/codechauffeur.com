@@ -3,7 +3,7 @@ title: "How to Add Custom Validation Rules to Adonis Validator"
 date: 2020-04-09T7:00:00+01:00
 draft: false
 description: "You can add your custom validation rules easily by following this article"
-images: ["images/extending-adonis-validator/adding-custom-validation-rules-adonis.png"]
+images: ["images/adding-custom-validation-rules-adonis/adding-custom-validation-rules-adonis.png"]
 tags: [Nodejs,Validation,AdonisJs]
 ---
 
@@ -47,7 +47,7 @@ cd mcu-character-checker && adonis serve --dev
 
 You can open the application on [localhost:3333](http://localhost:3333), AdonisJs serves on port 3333 by default. You should have this page in the image below if everything ran correctly.
 
-![Adonis Landing Page](/images/extending-adonis-validator/adonis-landing-page.png)
+![Adonis Landing Page](/images/adding-custom-validation-rules-adonis/adonis-landing-page.png)
 
 
 Now, let's create a page that collects data. We'll edit `start/routes.js`.
@@ -127,7 +127,7 @@ This will create `resources/views/check-character.edge`. Add the lines below to 
 
 The page should look like this;
 
-![MCU Character Checker landing page](/images/extending-adonis-validator/check-mcu-landing-page.png)
+![MCU Character Checker landing page](/images/adding-custom-validation-rules-adonis/check-mcu-landing-page.png)
 
 Our goal is to validate that a character (provided in the form) exists in the MCU. Obviously, this kind of validation may not be easy to achieve with the rules provided on AdonisJs validator so we will have to create a custom rule.
 
@@ -285,7 +285,7 @@ We'll modify our `check-character.edge` template and add the message data. Add t
 
 Our application is now validating MCU characters!
 
-![MCU Character Checker final](/images/extending-adonis-validator/final-screen.gif)
+![MCU Character Checker final](/images/adding-custom-validation-rules-adonis/final-screen.gif)
 
 You can check the full source code [here](https://github.com/olaoluwa-98/extending-adonis-validator-tutorial)
 
