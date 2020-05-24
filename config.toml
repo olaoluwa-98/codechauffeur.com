@@ -20,6 +20,15 @@ googleAnalytics = "UA-92329943-4"
     description = "Software engineering should be as fun as a ride, let's take the ride together🚗"
     hidefromhome = "true"
 
+# Pagination
+paginate = 25
+paginatePath = "page"
+
+
+# Taxonomies
+[taxonomies]
+    tag = "tags"
+
 # Menu
 [menu]
     # Header

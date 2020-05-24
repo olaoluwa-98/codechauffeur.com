@@ -4,7 +4,7 @@ date: 2020-04-09T7:00:00+01:00
 draft: false
 description: "You can add your custom validation rules easily by following this article"
 images: ["images/adding-custom-validation-rules-adonis/adding-custom-validation-rules-adonis.png"]
-tags: [Nodejs,Validation,AdonisJs]
+tags: [NodeJs,Validation,AdonisJs]
 ---
 
 If you are reading this article, I assume you must have used *AdonisJs* or you must have heard about the framework. 

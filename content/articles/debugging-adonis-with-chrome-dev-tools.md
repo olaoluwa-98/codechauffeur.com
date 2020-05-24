@@ -4,7 +4,7 @@ date: 2020-04-23T09:00:00+01:00
 draft: false
 description: "Debugging Adonis or Node.js can be easier using the debugger keyword"
 images: ["images/debugging-adonis-with-chrome/cover-image.png"]
-tags: [Node.js,Debugging,AdonisJs]
+tags: [NodeJs,Debugging,AdonisJs]
 ---
 
 Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or
