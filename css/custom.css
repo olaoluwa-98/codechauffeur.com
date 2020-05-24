@@ -19,12 +19,12 @@ img {
 
 header,
 footer {
-  margin: 3rem 0;
+  margin: 2rem 0;
   text-align: center;
 }
 
 main {
-  margin: 4rem 0;
+  margin: 2rem 0;
 }
 
 .container a:link, .container a:visited {

@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Nodejs on Code Chauffeur</title>
+    <title>NodeJs on Code Chauffeur</title>
     <link>https://codechauffeur.com/tags/nodejs/</link>
-    <description>Recent content in Nodejs on Code Chauffeur</description>
+    <description>Recent content in NodeJs on Code Chauffeur</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© Emmanuel Awotunde</copyright>
-    <lastBuildDate>Thu, 09 Apr 2020 07:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 24 May 2020 09:13:37 +0100</lastBuildDate>
     
 	<atom:link href="https://codechauffeur.com/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using a Database URL Parser in NodeJs</title>
+      <link>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</link>
+      <pubDate>Sun, 24 May 2020 09:13:37 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</guid>
+      <description>One of the points in The Twelve-Factor App is Config.
+An app’s config is everything that is likely to vary between deploys (staging, production, developer environments, etc). Most applications that require persistent storage use databases. Applications connect to databases using certain parameters and credentials which are usually stored in a type of Config. The database config usually includes a database driver, port, name, username and password.
+You must have seen one/more of these env variables in projects:</description>
+    </item>
+    
+    <item>
+      <title>Debugging Adonis With Chrome DevTools</title>
+      <link>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</link>
+      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</guid>
+      <description>Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or there&amp;rsquo;s a variable that you expect to have a value but it&amp;rsquo;s null or undefined.
+The first thing that comes to mind when debugging in Node.js is usually to use console.log. This usually will get you a solution but in the long run, it wastes time.</description>
+    </item>
     
     <item>
       <title>How to Add Custom Validation Rules to Adonis Validator</title>

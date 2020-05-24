@@ -3,8 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://codechauffeur.com/tags/12factor/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://codechauffeur.com/articles/</loc>
-    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/database/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/env/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/nodejs/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/tags/url/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</loc>
+    <lastmod>2020-05-24T09:13:37+01:00</lastmod>
   </url>
   
   <url>
@@ -19,11 +54,6 @@
   
   <url>
     <loc>https://codechauffeur.com/tags/shortcuts/</loc>
-    <lastmod>2020-05-09T18:07:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/</loc>
     <lastmod>2020-05-09T18:07:44+01:00</lastmod>
   </url>
   
@@ -48,17 +78,7 @@
   </url>
   
   <url>
-    <loc>https://codechauffeur.com/tags/node.js/</loc>
-    <lastmod>2020-04-23T09:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</loc>
-    <lastmod>2020-04-09T07:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/tags/nodejs/</loc>
     <lastmod>2020-04-09T07:00:00+01:00</lastmod>
   </url>
   
@@ -90,10 +110,6 @@
   <url>
     <loc>https://codechauffeur.com/contact/</loc>
     <lastmod>2020-01-01T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://codechauffeur.com/categories/</loc>
   </url>
   
 </urlset>

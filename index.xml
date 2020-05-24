@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>Using a Database URL Parser in NodeJs</title>
+      <link>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</link>
+      <pubDate>Sun, 24 May 2020 09:13:37 +0100</pubDate>
+      
+      <guid>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</guid>
+      <description>One of the points in The Twelve-Factor App is Config.
+An app’s config is everything that is likely to vary between deploys (staging, production, developer environments, etc). Most applications that require persistent storage use databases. Applications connect to databases using certain parameters and credentials which are usually stored in a type of Config. The database config usually includes a database driver, port, name, username and password.
+You must have seen one/more of these env variables in projects:</description>
+    </item>
+    
+    <item>
       <title>Convert String Case Easily in VS Code with this Extension</title>
       <link>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</link>
       <pubDate>Sat, 09 May 2020 18:07:44 +0100</pubDate>
