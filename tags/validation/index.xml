@@ -1,26 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Validation on Code Chauffeur</title>
-    <link>https://codechauffeur.com/tags/validation/</link>
-    <description>Recent content in Validation on Code Chauffeur</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>© Emmanuel Awotunde</copyright>
-    <lastBuildDate>Thu, 09 Apr 2020 07:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://codechauffeur.com/tags/validation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>How to Add Custom Validation Rules to Adonis Validator</title>
-      <link>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</link>
-      <pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</guid>
-      <description>If you are reading this article, I assume you must have used AdonisJs or you must have heard about the framework. AdonisJs is a NodeJs web framework that was inspired by Laravel. The framework was modeled after Laravel.
-Like most robust frameworks, AdonisJs comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Validation on Code Chauffeur</title><link>https://codechauffeur.com/tags/validation/</link><description>Recent content in Validation on Code Chauffeur</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><copyright>© Emmanuel Awotunde</copyright><lastBuildDate>Thu, 09 Apr 2020 07:00:00 +0100</lastBuildDate><atom:link href="https://codechauffeur.com/tags/validation/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Add Custom Validation Rules to Adonis Validator</title><link>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</link><pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate><guid>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</guid><description>If you are reading this article, I assume you must have used AdonisJs or you must have heard about the framework. AdonisJs is a NodeJs web framework that was inspired by Laravel. The framework was modeled after Laravel.
+Like most robust frameworks, AdonisJs comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own.</description></item></channel></rss>

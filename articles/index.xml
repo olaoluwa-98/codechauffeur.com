@@ -1,67 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Articles on Code Chauffeur</title>
-    <link>https://codechauffeur.com/articles/</link>
-    <description>Recent content in Articles on Code Chauffeur</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-uk</language>
-    <copyright>© Emmanuel Awotunde</copyright>
-    <lastBuildDate>Sun, 24 May 2020 09:13:37 +0100</lastBuildDate>
-    
-	<atom:link href="https://codechauffeur.com/articles/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Using a Database URL Parser in NodeJs</title>
-      <link>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</link>
-      <pubDate>Sun, 24 May 2020 09:13:37 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</guid>
-      <description>One of the points in The Twelve-Factor App is Config.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Articles on Code Chauffeur</title><link>https://codechauffeur.com/articles/</link><description>Recent content in Articles on Code Chauffeur</description><generator>Hugo -- gohugo.io</generator><language>en-uk</language><copyright>© Emmanuel Awotunde</copyright><lastBuildDate>Sun, 24 May 2020 09:13:37 +0100</lastBuildDate><atom:link href="https://codechauffeur.com/articles/index.xml" rel="self" type="application/rss+xml"/><item><title>Using a Database URL Parser in NodeJs</title><link>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</link><pubDate>Sun, 24 May 2020 09:13:37 +0100</pubDate><guid>https://codechauffeur.com/using-a-database-url-parser-in-nodejs/</guid><description>One of the points in The Twelve-Factor App is Config.
 An app’s config is everything that is likely to vary between deploys (staging, production, developer environments, etc). Most applications that require persistent storage use databases. Applications connect to databases using certain parameters and credentials which are usually stored in a type of Config. The database config usually includes a database driver, port, name, username and password.
-You must have seen one/more of these env variables in projects:</description>
-    </item>
-    
-    <item>
-      <title>Convert String Case Easily in VS Code with this Extension</title>
-      <link>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</link>
-      <pubDate>Sat, 09 May 2020 18:07:44 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</guid>
-      <description>As developers, we all want to develop things fast. If you use Visual Studio Code (VS Code), you should know about extensions. Extensions are a very big part of turning an ordinary text editor into a super productive environment for coding. There so many extensions available on VS Code and it&amp;rsquo;s easy to build one if you have a part of your development workflow you&amp;rsquo;d love to optimize or automate.</description>
-    </item>
-    
-    <item>
-      <title>Debugging Adonis With Chrome DevTools</title>
-      <link>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</link>
-      <pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</guid>
-      <description>Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or there&amp;rsquo;s a variable that you expect to have a value but it&amp;rsquo;s null or undefined.
-The first thing that comes to mind when debugging in Node.js is usually to use console.log. This usually will get you a solution but in the long run, it wastes time.</description>
-    </item>
-    
-    <item>
-      <title>How to Add Custom Validation Rules to Adonis Validator</title>
-      <link>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</link>
-      <pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</guid>
-      <description>If you are reading this article, I assume you must have used AdonisJs or you must have heard about the framework. AdonisJs is a NodeJs web framework that was inspired by Laravel. The framework was modeled after Laravel.
-Like most robust frameworks, AdonisJs comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own.</description>
-    </item>
-    
-    <item>
-      <title>Benefits of Being in a Community as a Developer</title>
-      <link>https://codechauffeur.com/benefits-of-being-in-a-community-as-a-developer/</link>
-      <pubDate>Sun, 22 Mar 2020 22:20:00 +0100</pubDate>
-      
-      <guid>https://codechauffeur.com/benefits-of-being-in-a-community-as-a-developer/</guid>
-      <description>This article was previously published on Medium in May 2017.
+You must have seen one/more of these env variables in projects:</description></item><item><title>Convert String Case Easily in VS Code with this Extension</title><link>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</link><pubDate>Sat, 09 May 2020 18:07:44 +0100</pubDate><guid>https://codechauffeur.com/convert-string-case-easily-in-vs-code-with-this-extension/</guid><description>As developers, we all want to develop things fast. If you use Visual Studio Code (VS Code), you should know about extensions. Extensions are a very big part of turning an ordinary text editor into a super productive environment for coding. There so many extensions available on VS Code and it&amp;rsquo;s easy to build one if you have a part of your development workflow you&amp;rsquo;d love to optimize or automate.</description></item><item><title>Debugging Adonis With Chrome DevTools</title><link>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</link><pubDate>Thu, 23 Apr 2020 09:00:00 +0100</pubDate><guid>https://codechauffeur.com/debugging-adonis-with-chrome-devtools/</guid><description>Debugging Node.js can be very difficult. Most times when something goes wrong it would take a while to get to the root of the problem because the error message may not be descriptive enough or there&amp;rsquo;s a variable that you expect to have a value but it&amp;rsquo;s null or undefined.
+The first thing that comes to mind when debugging in Node.js is usually to use console.log. This usually will get you a solution but in the long run, it wastes time.</description></item><item><title>How to Add Custom Validation Rules to Adonis Validator</title><link>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</link><pubDate>Thu, 09 Apr 2020 07:00:00 +0100</pubDate><guid>https://codechauffeur.com/how-to-add-custom-validation-rules-to-adonis-validator/</guid><description>If you are reading this article, I assume you must have used AdonisJs or you must have heard about the framework. AdonisJs is a NodeJs web framework that was inspired by Laravel. The framework was modeled after Laravel.
+Like most robust frameworks, AdonisJs comes with a validator module that helps you in validating data (usually user input). However, the default validator does not come with every possible rule, you sometimes have to implement your own.</description></item><item><title>Benefits of Being in a Community as a Developer</title><link>https://codechauffeur.com/benefits-of-being-in-a-community-as-a-developer/</link><pubDate>Sun, 22 Mar 2020 22:20:00 +0100</pubDate><guid>https://codechauffeur.com/benefits-of-being-in-a-community-as-a-developer/</guid><description>This article was previously published on Medium in May 2017.
 Covenant University Students and the facilitators during forLoopCU. Photo credit: Rotimi Okungbaye forLoopCU was the first developers’ meetup I attended. This was when my growth as a web developer actually started.
-I started learning web development last year 2016 after I finished my first year at the university (Computer Science). I learnt the basics of web development using HTML, CSS and JavaScript during my SIWES at Plat Technologies.</description>
-    </item>
-    
-  </channel>
-</rss>
+I started learning web development last year 2016 after I finished my first year at the university (Computer Science). I learnt the basics of web development using HTML, CSS and JavaScript during my SIWES at Plat Technologies.</description></item></channel></rss>
