@@ -1,14 +1,21 @@
-name: Push to Prod
+name: Publish Site
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
 
 jobs:
-  build:
-
+  build-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Hugo Actions
-      uses: srt32/hugo-action@v0.0.3
+      - name: Checkout Repo
+        uses: actions/checkout@master
+        with:
+          submodules: true
+      - name: Publish Site
+        uses: chabad360/hugo-gh-pages@master
+        with:
+          githubToken: ${{ secrets.API_TOKEN }}
+          cname: codechauffeur.com
