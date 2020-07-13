@@ -292,4 +292,4 @@ The following things occur:
 - The service automatically registers a new instance of the task and begins draining the old task running
 - The new task is dynamically registered on the Application Load Balancer
   
-You check the full bitbucket repository [here](https://bitbucket.org/olaoluwa-98/my-express-app)
+You can check the full bitbucket repository [here](https://bitbucket.org/olaoluwa-98/my-express-app)
