@@ -18,7 +18,7 @@ I used to learn fast and also talk about some nuances that come with the framewo
 
 A simple overview of the framework helps create a foundation or a sort of guide. Most frameworks have a website and give a short explanation of the framework. A good explanation will include a particular problem the framework aims to solve. Knowing this will help you see the point of using the framework.
 
-An example is [React](reactjs.org). On React's landing page, you easily see what the framework is about.
+An example is [React](https://reactjs.org). On React's landing page, you easily see what the framework is about.
 ![React home page](/images/learning-new-frameworks/react-home-page.png)
 
 Watching videos about the framework also helps kick start your learning. Good videos will expand on the problem the framework solves and if there are other frameworks solving the problem, the video explains the approach the framework takes and why it may be better than the others.
