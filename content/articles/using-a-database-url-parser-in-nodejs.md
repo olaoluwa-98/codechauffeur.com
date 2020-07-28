@@ -61,4 +61,4 @@ const dbConfig = parseDbUrl(process.env.DATABASE_URL);
 
 By using this process, you reduce the number of env variables.
 
-Note: There are some known issues with this method. If your database password contains some special characters, it'll break the parsing and the result will be inconsistent. Also, if you put a non existing driver, the libary does not validate it.
+Note: There are some known issues with this method. If your database password contains some special characters, it'll break the parsing and the result will be inconsistent. Also, if you put a non existing driver, the library does not validate it.
