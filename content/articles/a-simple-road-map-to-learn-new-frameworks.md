@@ -9,10 +9,9 @@ tags: [Frameworks,Mastery,Tools]
 It's 2020, there are lots of things to learn as a software developer. Your ability to learn fast sets you apart.
 
 One of the best things about modern software development is the availability of free tools and frameworks. For example, as a frontend developer there's a lot of frontend frameworks you can use: React, Vue, Angular, Emberjs, Backbonejs, and many more.
-This can also be a challenge in terms of what to use. A developer in 2020 would have used at least 2 frameworks one time or another.
+This could be challenging because you have to select what to use. A developer in 2020 would have used at least 2 frameworks one time or another.
 
-Picking up a new framework is good for the learning experience and expanding your perspective. It doesn't really matter which framework it is. I see it as starting a new adventure. I have used a number of frameworks and in this, article I will explain some methods
-I used to learn fast and also talk about some nuances that come with the framework ecosystem.
+Picking up a new framework is good for the learning experience and expanding your perspective. It doesn't really matter which framework it is. I see it as starting a new adventure. I have used a lot of frameworks over time. In this article, I will explain some methods I used to learn fast and also talk about some nuances that surround the frameworks' ecosystems.
 
 ## **Getting the Overview**
 
