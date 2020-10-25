@@ -44,6 +44,14 @@ paginatePath = "page"
         url = "/contact/"
         name = "Contact"
         weight = 3
+    [[menu.main]]
+        url = "/portfolio/"
+        name = "Portfolio"
+        weight = 4
+    [[menu.main]]
+        url = "/podcast/"
+        name = "Podcast"
+        weight = 5
 
     # Footer
     [[menu.footer]]
