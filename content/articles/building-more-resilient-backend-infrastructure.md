@@ -31,7 +31,7 @@ This is a very relevant idea to have when building backend infrastructures. You 
 
 ## Single point of failure
 
-The larger your backend infrastructure, the more attention you need to give to it. You need to constantly monitoring all the moving parts and ensure they are smooth. If you notice unusual traffic in certain areas, you should note them and attend to them. You should look out for bottlenecks and single points of failure. A single point of failure is a part of your infrastructure that if it fails, the whole backend infrastructure will not be able to function. You should either reduce as many single points of failure as possible or work very hard to secure and ensure they are very reliable.
+The larger your backend infrastructure, the more attention you need to give to it. You need to constantly monitor all the moving parts and ensure they are smooth. If you notice unusual traffic in certain areas, you should note them and attend to them. You should look out for bottlenecks and single points of failure. A single point of failure is a part of your infrastructure that if it fails, the whole backend infrastructure will not be able to function. You should either reduce as many single points of failure as possible or work very hard to secure and ensure they are very reliable.
 
 ## Automation
 
@@ -50,7 +50,7 @@ Monitoring how well your backend is performing will give you insights on how to 
 
 ## Security
 
-Take security very seriously from the first day. There are many areas to consider security
+Take security very seriously on the first day. There are many areas to consider security
 
 - Code - perform validation before processing data, add lots of checks to prevent malicious activities. You should also implement rate limiters to prevent DDoS attacks
 - Secrets - you should protect all your secret keys
