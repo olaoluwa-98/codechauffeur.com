@@ -2,7 +2,7 @@
 title: "Building More Resilient Backend Infrastructure"
 date: 2020-10-29T06:45:44+01:00
 draft: false
-description: "Common things to consider when serving a fast growing customer base"
+description: "Common things to consider when serving a fast-growing customer base"
 images: ["images/building-more-resilient-backend-infrastructure/building-more-resilient-backend-infrastructure.png"]
 tags: [Backend,Infrastructure,Architecture]
 ---
