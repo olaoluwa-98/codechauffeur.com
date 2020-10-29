@@ -109,7 +109,7 @@ When handling requests from users, there are some computations/processes that ma
 
 I sometimes read about how companies managing large scale applications solve difficult problems. This helps me foresee some problems or challenges I may face in the future and learn about them before time. Two blogs come to mind.
 
-- [User Engineering](https://eng.uber.com/)
+- [Uber Engineering](https://eng.uber.com/)
 - [Slack Engineering](https://slack.engineering/)
 
 Please note that you don't have to solve the problems they solve the same way or take their own solution as final, you should just learn from their solution and that can help you think of better solutions. You should also know how large their application is and compare that to the problem before you start assuming your own application will face the same problems soon.
