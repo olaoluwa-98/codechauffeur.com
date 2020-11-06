@@ -33,7 +33,7 @@ An example is:
 DATABASE_URL=mysql://root:password123@localhost:3306/app_db
 ```
 
-To use the libary, simply install with npm:
+To use the library, simply install with npm:
 
 ```sh
 npm install parse-database-url
@@ -61,4 +61,4 @@ const dbConfig = parseDbUrl(process.env.DATABASE_URL);
 
 By using this process, you reduce the number of env variables.
 
-Note: There are some known issues with this method. If your database password contains some special characters, it'll break the parsing and the result will be inconsistent. Also, if you put a non existing driver, the library does not validate it.
+Note: There are some known issues with this method. If your database password contains some special characters, it'll break the parsing and the result will be inconsistent. Also, if you put a non-existing driver, the library does not validate it.
