@@ -46,7 +46,7 @@ As your backend infrastructure grows bigger, you need to automate a lot of thing
 
 ## Monitoring
 
-Monitoring how well your backend is performing will give you insights on how to improve it. You should use robust monitoring tools depending on how large your backend is. Tools like [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com), etc.
+Monitoring how well your backend is performing will give you insights on how to improve it. You should use robust monitoring tools depending on how large your backend is. Tools like [Prometheus](https://prometheus.io), [Grafana](https://grafana.com), etc.
 
 ## Security
 
@@ -104,6 +104,14 @@ Rollbacks, a good deployment process should include a rollback option. When you 
 ## Queues
 
 When handling requests from users, there are some computations/processes that may take very long and the request may timeout. Such computations/processes can be handled by Queues. Queues can solve many different problems in an elegant way, from smoothing out processing peaks to creating robust communication channels between microservices or offloading heavy work from one server to many smaller workers, etc.
+
+## Distributed systems
+
+This article doesn't cover design patterns for distributed systems. You can read about them in these links:
+
+- [Performance Patterns in Microservices-Based Integrations](https://dzone.com/articles/performance-patterns-in-microservices-based-integr-1)
+- [Building Fault Tolerant Microservices](https://www.slideshare.net/KristofferErlandsson/building-fault-tolerant-microservices)
+- [It takes more than a Circuit Breaker to create a resilient application](https://developers.redhat.com/blog/2017/05/16/it-takes-more-than-a-circuit-breaker-to-create-a-resilient-application)
 
 ## Keeping up to date
 
