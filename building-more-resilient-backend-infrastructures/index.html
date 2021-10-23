@@ -1,7 +1,7 @@
 <!doctype html><html lang=en-uk>
 <head>
 <meta charset=utf-8>
-<meta name=generator content="Hugo 0.88.0">
+<meta name=generator content="Hugo 0.88.1">
 <meta name=viewport content="width=device-width,initial-scale=1">
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,800" rel=stylesheet type=text/css>
 <link rel=stylesheet href=//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css>
@@ -28,7 +28,7 @@
 <meta itemprop=name content="Building More Resilient Backend Infrastructures">
 <meta itemprop=description content="Common things to consider when serving a fast-growing customer base"><meta itemprop=datePublished content="2020-10-29T06:45:44+01:00">
 <meta itemprop=dateModified content="2020-10-29T06:45:44+01:00">
-<meta itemprop=wordCount content="1948"><meta itemprop=image content="https://codechauffeur.com/images/building-more-resilient-backend-infrastructures/building-more-resilient-backend-infrastructures.png">
+<meta itemprop=wordCount content="1988"><meta itemprop=image content="https://codechauffeur.com/images/building-more-resilient-backend-infrastructures/building-more-resilient-backend-infrastructures.png">
 <meta itemprop=keywords content="Backend,Infrastructure,Architecture,">
 </head>
 <body>
@@ -74,7 +74,7 @@
 <li>and many more</li>
 </ul>
 <h2 id=monitoring>Monitoring</h2>
-<p>Monitoring how well your backend is performing will give you insights on how to improve it. You should use robust monitoring tools depending on how large your backend is. Tools like <a href=https://prometheus.io/>Prometheus</a>, <a href=https://grafana.com>Grafana</a>, etc.</p>
+<p>Monitoring how well your backend is performing will give you insights on how to improve it. You should use robust monitoring tools depending on how large your backend is. Tools like <a href=https://prometheus.io>Prometheus</a>, <a href=https://grafana.com>Grafana</a>, etc.</p>
 <h2 id=security>Security</h2>
 <p>Take security very seriously on the first day. There are many areas to consider security</p>
 <ul>
@@ -114,6 +114,13 @@
 <p>Rollbacks, a good deployment process should include a rollback option. When you mistakenly ship a bug into production, instead of attempting to quickly fix the bug and redeploying, you should be able to rollback your deployment to the older version.</p>
 <h2 id=queues>Queues</h2>
 <p>When handling requests from users, there are some computations/processes that may take very long and the request may timeout. Such computations/processes can be handled by Queues. Queues can solve many different problems in an elegant way, from smoothing out processing peaks to creating robust communication channels between microservices or offloading heavy work from one server to many smaller workers, etc.</p>
+<h2 id=distributed-systems>Distributed systems</h2>
+<p>This article doesn&rsquo;t cover design patterns for distributed systems. You can read about them in these links:</p>
+<ul>
+<li><a href=https://dzone.com/articles/performance-patterns-in-microservices-based-integr-1>Performance Patterns in Microservices-Based Integrations</a></li>
+<li><a href=https://www.slideshare.net/KristofferErlandsson/building-fault-tolerant-microservices>Building Fault Tolerant Microservices</a></li>
+<li><a href=https://developers.redhat.com/blog/2017/05/16/it-takes-more-than-a-circuit-breaker-to-create-a-resilient-application>It takes more than a Circuit Breaker to create a resilient application</a></li>
+</ul>
 <h2 id=keeping-up-to-date>Keeping up to date</h2>
 <p>I sometimes read about how companies managing large scale applications solve difficult problems. This helps me foresee some problems or challenges I may face in the future and learn about them before time. Two blogs come to mind.</p>
 <ul>
@@ -132,7 +139,7 @@
 <aside id=meta>
 <div>
 <section>
-<span class=entry-meta><time itemprop=datePublished datetime=2020-10-29>October 29, 2020 | 1948 Words</time></span>
+<span class=entry-meta><time itemprop=datePublished datetime=2020-10-29>October 29, 2020 | 1988 Words</time></span>
 </section>
 <ul id=tags>
 <li> <a href=https://codechauffeur.com/tags/backend>Backend</a> </li>
