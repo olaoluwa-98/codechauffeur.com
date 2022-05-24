@@ -5,10 +5,11 @@ date: 2020-10-25T00:00:00+01:00
 normalpage: false
 ---
 
-I have over 3 years experience building for the web. I'm currently focused on backend infrastructures. I currently use **Node.js (TS & JS)** and **Python** for most of my development.
+I have over 4 years experience building for the web. I'm currently focused on backend infrastructures. I currently use **Node.js (TS & JS)** and **Kotlin** for most of my development.
 
 These are some of the projects I have worked on:
 
+- [Pleo](https://pleo.io) - I'm currently working as a full-time software engineer here.
 - [Jetseed](https://jetseed.com) - An app for sending money, making payment and saving securely. I worked on upgrading the backend infrastructure for the company's re-brand (it was formerly Pettysave). Learn more about the re-brand in this [article](https://blog.jetseed.com/pettysave-is-now-jetseed-2918ea2c3c76).
 - [Tamborin](https://tamborin.io) - A platform that offers local and international tech jobs, simplifies and handles all the processes of applying for a job. I worked on the backend API & infrastructure.
 - [Pettysave](https://pettysave.com) - A savings & investment app. I built and currently manage the backend infrastructure. I wrote an [article about it](/my-experience-with-rebuilding-a-product-from-ground-up).
@@ -18,4 +19,4 @@ These are some of the projects I have worked on:
 
 Asides from these projects, I also contribute to open source projects in my free time. You can check my Github profile, [@olaoluwa-98](https://github.com/olaoluwa-98).
 
-Want to hire me for a freelance project? Send me a mail: awotunde.emmanuel1@gmail.com.
+Want to hire me for a freelance project? Send me a mail: emmanuel@codechauffeur.com
