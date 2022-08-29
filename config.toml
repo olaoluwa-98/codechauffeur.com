@@ -55,7 +55,6 @@ paginatePath = "page"
 
     # Footer
     [[menu.footer]]
-      [[menu.footer]]
         url = "https://www.linkedin.com/in/emmanuel-awotunde"
         name = "Linkedin"
         weight = 1
@@ -68,9 +67,13 @@ paginatePath = "page"
         name = "Email"
         weight = 3
     [[menu.footer]]
+        url = "https://bit.ly/a-tech-guide"
+        name = "Tech Guide"
+        weight = 4
+    [[menu.footer]]
         url = "/articles/index.xml"
         name = "RSS"
-        weight = 4
+        weight = 5
 
 enableRobotsTXT = true
 canonifyURLs = true
