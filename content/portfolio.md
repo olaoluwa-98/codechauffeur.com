@@ -5,11 +5,12 @@ date: 2020-10-25T00:00:00+01:00
 normalpage: false
 ---
 
-I have over 4 years experience building for the web. I'm currently focused on backend infrastructures. I currently use **Node.js** and **Kotlin** for most of my development.
+I have over 4 years experience building for the web. I'm currently focused on backend infrastructures. I currently use **Java** and **Node.js**.
 
-These are some of the projects I have worked on:
+Some projects I worked on include:
 
-- [Pleo](https://pleo.io) - I'm currently working as a full-time software engineer here.
+- [Adyen](https://adyen.com) - A global payment processor & bank. I currently work here as a Java Engineer on the team building and maintaining the [Payouts service](https://www.adyen.com/payouts).
+- [Pleo](https://pleo.io) - A business spending solution. I worked on the backend of the [Partner Portal](https://www.pleo.io/en/partnerships).
 - [Jetseed](https://jetseed.com) - An app for sending money, making payment and saving securely. I worked on upgrading the backend infrastructure for the company's re-brand (it was formerly Pettysave). Read more about the re-brand in this [article](https://blog.jetseed.com/pettysave-is-now-jetseed-2918ea2c3c76).
 - [Tamborin](https://tamborin.io) - A platform that offers local and international tech jobs, simplifies and handles all the processes of applying for a job. I worked on the backend API & infrastructure.
 - [Pettysave](https://pettysave.com) - A fintech platform for savings & investments. I built the backend infrastructure. I wrote an [article about it](/my-experience-with-rebuilding-a-product-from-ground-up).
